@@ -51,7 +51,7 @@ with sync_playwright() as p:
     # total_ads = soup.find('span', {'class': 'resultsShowingCount-1707762110'}).text.split()[-2]
     # pages = int(int(total_ads) / 40) + 1
     
-    for i in range(2,5): # There were max 100 pages.
+    for i in range(2,101): # There were max 100 pages.
         page.goto(f'https://www.kijiji.ca/b-apartments-condos/city-of-toronto/page-{i}/c37l1700273')
         page.is_visible('main')
         html = page.inner_html('main')
